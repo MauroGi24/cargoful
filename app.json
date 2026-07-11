@@ -1,0 +1,53 @@
+{
+  "expo": {
+    "name": "Cargoful",
+    "slug": "cargoful",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/ico.png",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "package": "com.cargoful",
+      "adaptiveIcon": {
+        "backgroundColor": "#FFFFFF",
+        "foregroundImage": "./assets/images/ico.png"
+      }
+    },
+    "plugins": [
+      "expo-secure-store",
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#FFFFFF",
+          "image": "./assets/images/ico.png",
+          "imageWidth": 300,
+          "resizeMode": "contain",
+          "android": {
+            "backgroundColor": "#FFFFFF",
+            "image": "./assets/images/ico.png",
+            "imageWidth": 300,
+            "resizeMode": "contain"
+          }
+        }
+      ],
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "gradleProperties": {
+              "org.gradle.jvmargs": "-Xmx4096m -XX:MaxMetaspaceSize=512m -XX:+UseG1GC -Dfile.encoding=UTF-8"
+            }
+          }
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "2e3ee6a7-3c0d-4222-81f2-cabb6d8f3aa1"
+      }
+    }
+  }
+}
